@@ -12,13 +12,20 @@
 
 #### 3. git 版本库
 1. 版本库概念： 仓库，目录
-2. 创建空的版本库： `git init`
-3. 添加文件到版本库(可添加多个文件，用空格分隔)： `git add file` 
-4. 提交已添加的文件快照到仓库 ： `git commit -m 'xxx’`
-5. 查看版本提交（commit）记录 ： `git log`  输出修改概述，提交时的commit id,提交时间，作者
-6. 版本回退到指定版本 ： `git reset --hard commit_id`  commit_id 可通 `git log` 命令进行查看
 
-少时诵诗书所所
+2. 创建空的版本库： `git init`
+
+3. 添加文件到版本库的暂存区(可添加多个文件，用空格分隔)： `git add file` 
+
+4. 提交已添加到暂存区的文件快照到版本库的当前分支 ： `git commit -m 'xxx’`
+
+   ![git-repo](https://www.liaoxuefeng.com/files/attachments/919020037470528/0)
+
+5. 查看版本提交（commit）记录 ： `git log`  输出修改概述，提交时的commit id,提交时间，作者
+
+6. 查看近期历史命令 ： `git reflog`
+
+7. 版本回退到指定版本 ： `git reset --hard commit_id`  commit_id 可通 `git log` 或者 `git reflog`命令进行查看
 
 ### 分支管理
 #### 1. 创建分支
