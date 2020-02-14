@@ -27,6 +27,8 @@
 
 7. 版本回退到指定版本 ： `git reset --hard commit_id`  commit_id 可通 `git log` 或者 `git reflog`命令进行查看
 
+8. 少时诵诗书所所所所
+
 ### 分支管理
 #### 1. 创建分支
 1. 基于当前分支创建新分支
