@@ -14,7 +14,7 @@
 1. 版本库概念： 仓库，目录
 2. 创建空的版本库： `git init`
 3. 添加文件到版本库(可添加多个文件，用空格分隔)： `git add file` 
-4. 提交已添加的文件到仓库 ： `git commit -m 'xxx’`
+4. 提交已添加的文件快照到仓库 ： `git commit -m 'xxx’`
 
 
 
@@ -28,11 +28,14 @@
 1. 查看分支状态
 
     > git status
+
 2. 检出分支
 
    > git branch
 
 3. 查看文件修改的内容 ： `git diff 文件名`
+
+4. 查看文件添加记录 ： `git log`
 
 #### 3. 删除分支
    > git branch -d 分支名 
