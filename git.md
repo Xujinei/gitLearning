@@ -27,36 +27,40 @@
 
 7. 版本回退到指定版本 ： `git reset --hard commit_id`  commit_id 可通 `git log` 或者 `git reflog`命令进行查看
 
+#### 4. git 远程仓库
+
+1. 远程仓库 如 github , gitlab
+2. 本地仓库关联远程仓库 :`git remote add origin git@github.com:userName/respName.git ` 
+3. 将本地仓库分支推送并关联到远程仓库分支：`git push -u orgin master`
+4. 克隆远程仓库到本地 ： `git clone git@github.com:userName/respName.git`
+
+### 文件操作
+
+1. 查看文件修改的内容 ： `git diff 文件名`
+2. 检出工作区已删除，但是版本库中未删除的文件到工作区 / 如果文件在工作区都版本库中都存在，则用版本库中的文件内容覆盖更新工作区的文件内容： `git checkout -- 文件名`
+3. 从当前分支中删除文件（工作区的文件也会被删除）： `git rm 文件名`
+4. 从暂存区中强行删除文件（工作区的文件也会被删除）： `git rm -f 文件名`
+
 ### 分支管理
 #### 1. 创建分支
 1. 基于当前分支创建新分支
-    > git branch 分支名
-    > git checkout -b 分支名
+    1. `git branch 分支名`
+    2. `git checkout -b 分支名`
 
 #### 2. 查看分支
-1. 查看分支状态
+1. 查看分支状态 `git status`
 
-    > git status
+2. 检出所有分支 `git branch`
 
-2. 检出分支
-
-   > git branch
-
-3. 查看文件修改的内容 ： `git diff 文件名`
-
-4. 检出工作区已删除，但是版本库中未删除的文件到工作区 / 如果文件在工作区都版本库中都存在，则用版本库中的文件内容覆盖更新工作区的文件内容： `git checkout -- 文件名`
 
 #### 3. 删除分支
-   > git branch -d 分支名 
-   > 1. 强制删除
-   >  > git branch -D 分支名
-   > 1. 匹配分支名中存在xxx 字符的分支 批量删除分支
-   >  > git branch |grep 'xxx' |xargs git branch -D 
-   >  > > git branch 输出当前分支列表
-   >  > > grep 是对 git branch 的输出结果进行匹配，匹配值当然就是 xxx 
-   >  > > xargs 的作用是将参数列表转换成小块分段传递给其他命令
+
+1. 删除分支：`git branch -d 分支名 `
+2. 强制删除分支： `git branch -D 分支名`
+3. 匹配分支名中存在xxx 字符的分支 批量删除分支 ： `git branch |grep 'xxx'|xargs git branch -D`
+   1. `git branch` : 输出当前分支列表
+   2. `grep` :是对 git branch 的输出结果进行匹配，匹配值当然就是 xxx 
+   3. `xargs` : 将参数列表转换成小块分段传递给其他命令
 
 #### 3.合并分支
-1. 将master 分支合并到当前分支
-    > git merge master
-    > 2.
+1. 将master 分支合并到当前分支 : `git merge master`
