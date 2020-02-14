@@ -15,8 +15,8 @@
 2. 创建空的版本库： `git init`
 3. 添加文件到版本库(可添加多个文件，用空格分隔)： `git add file` 
 4. 提交已添加的文件快照到仓库 ： `git commit -m 'xxx’`
-
-
+5. 查看版本提交（commit）记录 ： `git log`  输出修改概述，提交时的commit id,提交时间，作者
+6. 版本回退到指定版本 ： `git reset --hard commit_id`  commit_id 可通 `git log` 命令进行查看
 
 ### 分支管理
 #### 1. 创建分支
@@ -35,7 +35,7 @@
 
 3. 查看文件修改的内容 ： `git diff 文件名`
 
-4. 查看文件添加记录 ： `git log`  输出修改概述，提交时的commit id,提交时间，作者
+4. 
 
 #### 3. 删除分支
    > git branch -d 分支名 
