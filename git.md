@@ -18,6 +18,8 @@
 5. 查看版本提交（commit）记录 ： `git log`  输出修改概述，提交时的commit id,提交时间，作者
 6. 版本回退到指定版本 ： `git reset --hard commit_id`  commit_id 可通 `git log` 命令进行查看
 
+少时诵诗书所所
+
 ### 分支管理
 #### 1. 创建分支
 1. 基于当前分支创建新分支
