@@ -23,6 +23,8 @@
 
 5. 查看版本提交（commit）记录 ： `git log`  输出修改概述，提交时的commit id,提交时间，作者
 
+   1. 查看分支合并线路图 ; `git log --graph`
+
 6. 查看近期历史命令 ： `git reflog`
 
 7. 版本回退到指定版本 ： `git reset --hard commit_id`  commit_id 可通 `git log` 或者 `git reflog`命令进行查看
@@ -33,6 +35,8 @@
 2. 本地仓库关联远程仓库 :`git remote add origin git@github.com:userName/respName.git ` 
 3. 将本地仓库分支推送并关联到远程仓库分支：`git push -u orgin master`
 4. 克隆远程仓库到本地 ： `git clone git@github.com:userName/respName.git`
+5. 创建本地分支和远程分支的连接: `git branch --set-upstream-to <branchName> origin/<branchName> `
+6. 拉取远程分支到本地 : `git pull`
 
 ### 文件操作
 
@@ -44,8 +48,9 @@
 ### 分支管理
 #### 1. 创建分支
 1. 基于当前分支创建新分支
-    1. `git branch 分支名`
-    2. `git checkout -b 分支名`
+    1. 创建分支： `git branch 分支名`
+    2. 创建并切换到新分支：  `git checkout -b 分支名`  不加 `-b` 为切换分支
+    3. 创建并切换到新分支（**最新版本支持**）  : `git swtich -c 分支名` ， 不加`-c` 为切换分支
 
 #### 2. 查看分支
 1. 查看分支状态 `git status`
@@ -64,3 +69,22 @@
 
 #### 3.合并分支
 1. 将master 分支合并到当前分支 : `git merge master`
+
+#### 4. 工作区分支内容暂存
+
+1. 不想提交工作区分支内容到仓库，但是想切换新的分支时，可将当前工作区的内容暂存：`git stash`
+2. 查看暂存内容 : `git stash list`
+3. 将暂存内容恢复到工作区（**不删除暂存内容**）: `git stash apply`
+4. 删除暂存内容 :`git stash drop`
+5. 恢复并删除暂存内容: `git stash pop`
+
+#### 5. 标签
+
+1. 概述: 标签是对commit 的标记，相当于commit_id 方便记忆或查询的一个名字
+2. 检出所有标签 : `git tag`
+3. 在当前分支的当前待commit上创建标签 ：`git tag tagName`
+4. 创建对于commitId 的标签 : `git tag tagName commitId`
+5. 查看指定标签的说明 ： `git show tagName`
+6. 删除本地标签 : `git tag -d tagName`
+7. 推送本地标签到远程 ：`git push origin tagName`
+8. 删除远程标签 : `git push origin ：refs/tags/tagName`
