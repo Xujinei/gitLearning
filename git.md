@@ -4,11 +4,11 @@
 #### 2. 与svn 的区别
 1. git 是**分布式**的版本控制系统
     1. 分布式： 没有中央服务器之说，每个人的电脑都是完整的版本库，每次只提交改动点。
-    2. ![c2e35e40dfe34bd07ce39830dc8286f6.png](en-resource://database/413:0)
+    2. ![分布式版本管理](F:\study\git\分布式版本管理.jpg)
 
 2. svn 是**集中式**的版本控制系统
     1. 集中式 ： 版本库存放在中央服务器，工作前需要先从中央服务器获取最新版本，在开始在自己的电脑上工作。
-    2. ![bb42ef3d05ea529e7202c9ef4c88e354.png](en-resource://database/411:0)
+    2. ![集中式版本管理](F:\study\git\集中式版本管理.jpg)
 
 #### 3. git 版本库
 1. 版本库概念： 仓库，目录
@@ -17,9 +17,9 @@
 
 3. 添加文件到版本库的暂存区(可添加多个文件，用空格分隔)： `git add file` 
 
-4. 提交已添加到暂存区的文件快照到版本库的当前分支 ： `git commit -m 'xxx’`
+4. 提交已添加到暂存区的文件快照到版本库的当前分支 ： `git commit -m 'xxx’
 
-   ![git-repo](https://www.liaoxuefeng.com/files/attachments/919020037470528/0)
+   ![git空间](F:\study\git\git空间.jpg)
 
 5. 查看版本提交（commit）记录 ： `git log`  输出修改概述，提交时的commit id,提交时间，作者
 
@@ -88,3 +88,7 @@
 6. 删除本地标签 : `git tag -d tagName`
 7. 推送本地标签到远程 ：`git push origin tagName`
 8. 删除远程标签 : `git push origin ：refs/tags/tagName`
+
+
+
+[张雪峰git 教程] <https://www.liaoxuefeng.com/wiki/896043488029600>
